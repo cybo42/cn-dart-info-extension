@@ -14,8 +14,8 @@ app.controller("AdBundleController", ["$scope", function($scope){
 		$scope.$apply(function(){
 			var info = bg.bundleInfoDB[key];
 			$scope.tab = key;
-	        $scope.info = info;
-	        $scope.staleBundle = isStale(info);
+	    $scope.info = info;
+	    $scope.staleBundle = isStale(info);
 		});
 	});
 }]);

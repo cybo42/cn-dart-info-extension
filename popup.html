@@ -1,0 +1,50 @@
+<html data-ng-app="app" data-ng-csp>
+	<head>
+		<script src="angular.min.js"></script>
+		<script src="popup.js"></script>
+    	<link rel="stylesheet" href="bootstrap-3.3.4-dist/css/bootstrap.min.css">
+
+    	<!-- Optional theme -->
+    	<link rel="stylesheet" href="bootstrap-3.3.4-dist/css/bootstrap-theme.min.css">
+
+    	<!-- Latest compiled and minified JavaScript -->
+    	<!-- // <script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script> -->
+	</head>
+
+
+	<body class="container">
+		<div ng-controller="AdBundleController">
+			<h3>CN Ad Bundle</h3>
+			<div class="table-responsive">
+			<table class="table table-striped table-condensed">
+				<tr>
+					<th>Site</th> <td>{{info.bundleInfo.site}}</td>
+				</tr>
+				<tr>
+					<th>Environment</th> <td>{{info.bundleInfo.env.env}} 
+					({{info.bundleInfo.env.name}}-{{info.bundleInfo.env.version}})</td>
+				</tr>
+				<tr ng-class="{'danger': staleBundle }">
+					<th>Bundled</th> <td>{{info.bundleInfo.builtOn}}</td>
+				</tr>
+				<tr>
+					<th>Bundle Version</th> <td>{{info.bundleInfo.version}}</td>
+				</tr>
+				<tr>
+					<th>Plugins</th> <td>{{info.bundleInfo.configuredPlugins}}</td>
+				</tr>
+				<tr>
+					<th>Include cn.js</th> <td>{{info.bundleInfo.bundleCN}}</td>
+				</tr>
+				<tr>
+					<th>Include jQuery</th> <td>{{info.bundleInfo.bundlejQuery}}</td>
+				</tr>
+
+			</table>
+		</div>
+
+		</div>
+
+	</body>
+</html>
+
